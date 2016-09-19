@@ -152,6 +152,7 @@ $(document).ready(function(){
 	        // get the search text which is the 
 	        // contents of the search box
 	        var search_text = $('#searchbox').val();
+	        search_text = search_text.toLowerCase();
 	        var photo_array = [];
 	        // print the search box 
 	        // (this is an example of using
@@ -179,13 +180,13 @@ $(document).ready(function(){
 	            
 	            // return true if the title contains 
 	            // the search text
-	            if (d.title.toLowerCase().search(search_text) > -1){
+	            if (d.title.search(search_text) > -1){
 	              return true;
 	            }
 	            
 	            // return true if the author contains 
 	            // the search text
-	            if (d.description.toLowerCase().search(search_text) > -1){
+	            if (d.description.search(search_text) > -1){
 	              return true;
 	            }
 
